@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:19:23 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 18:32:27 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 19:02:07 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,14 @@ int main(int argc, char **argv)
 	{
 		array_2d = ft_split(argv[1], ' ');
 		if (!array_2d)
-		{
-			free_2d_array(array_2d);
-			ft_error("Failed to split input");
-		}
+			mem_error(array_2d);
 		init(array_2d, &list_a, &list_b);
 	}
 	else 
 	{
 		array_2d = strdup_2d_array(argv +1);
+		if (!array_2d)
+			mem_error(array_2d);
 		init(array_2d, &list_a, &list_b);
 	}
 	print_list(list_a);

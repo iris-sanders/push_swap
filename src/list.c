@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 12:56:09 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 18:33:04 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 19:00:49 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ t_list	*create_first_node(char **array_2d, t_list *head_a, int num)
 {
 	head_a = ft_lstnew(num);
 	if (!head_a)
-	{
-		free_2d_array(array_2d);
-		ft_error("Failed to create first node");
-	}
+		mem_error(array_2d);
 	return (head_a);
 }
 
@@ -57,9 +54,8 @@ t_list	*add_nodes_to_list_back(char **array_2d, t_list *head_a, int num)
 	next_node = ft_lstnew(num);
 	if (!next_node)
 	{
-		free_2d_array(array_2d);
 		free_list(head_a);
-		ft_error("Failed to create new node");
+		mem_error(array_2d);
 	}
 	ft_lstadd_back(&head_a, next_node);
 	return (next_node);

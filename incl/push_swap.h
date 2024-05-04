@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:09:51 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 18:32:39 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 19:00:57 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ bool	is_number(char *s);
 void	input_is_valid(char **array);
 
 //utils.c
+void	mem_error(char **array);
 int		count_array(char **array_2d);
 char	**strdup_2d_array(char **temp_array);
 void	free_list(t_list *head);

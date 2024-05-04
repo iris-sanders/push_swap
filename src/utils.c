@@ -6,11 +6,17 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:37:02 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 18:33:30 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 19:02:16 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	mem_error(char **array)
+{
+	free_2d_array(array);
+	ft_error("Failed to allocate memory");
+}
 
 int		count_array(char **array_2d) //ft_strlen
 {
