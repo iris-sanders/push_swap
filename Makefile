@@ -6,12 +6,12 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 16:19:13 by isanders          #+#    #+#              #
-#    Updated: 2024/04/29 18:47:42 by irsander         ###   ########.fr        #
+#    Updated: 2024/05/04 17:41:48 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 NAME = push_swap
 
@@ -24,7 +24,9 @@ SRC_DIR = src
 FILES = main.c \
 		parser_utils.c \
 		parser.c \
-		utils.c
+		utils.c \
+		list.c \
+		list_utils.c \
 
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))	
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))

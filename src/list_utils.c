@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   list_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 17:23:54 by irissanders       #+#    #+#             */
-/*   Updated: 2024/05/04 13:57:02 by irsander         ###   ########.fr       */
+/*   Created: 2024/05/04 17:41:15 by irsander          #+#    #+#             */
+/*   Updated: 2024/05/04 17:41:38 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "push_swap.h"
 
-// void	ft_lstiter(t_list *lst, void (*f)(void *))
-// {
-// 	while (lst)
-// 	{
-// 		f(lst->content);
-// 		lst = lst->next;
-// 	}
-// }
+void	print_list(t_list *head)
+{
+	t_list	*node;
+
+	node = head;
+	while (node != NULL)
+	{
+		ft_printf("%i", node->num);
+		node = node->next;
+	}
+}

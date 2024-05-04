@@ -6,7 +6,7 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 16:36:41 by irsander          #+#    #+#              #
-#    Updated: 2024/02/03 11:45:11 by irsander         ###   ########.fr        #
+#    Updated: 2024/05/04 13:55:35 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,15 +49,15 @@ SRC			=	ft_isalpha.c \
 				ft_putstr_fd.c \
 				ft_split.c \
 				ft_itoa.c \
-				ft_lstnew_bonus.c \
-				ft_lstadd_front_bonus.c \
-				ft_lstsize_bonus.c \
-				ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c \
-				ft_lstdelone_bonus.c \
-				ft_lstclear_bonus.c \
-				ft_lstiter_bonus.c \
-				ft_lstmap_bonus.c \
+				# ft_lstnew_bonus.c \
+				# ft_lstadd_front_bonus.c \
+				# ft_lstsize_bonus.c \
+				# ft_lstlast_bonus.c \
+				# ft_lstadd_back_bonus.c \
+				# ft_lstdelone_bonus.c \
+				# ft_lstclear_bonus.c \
+				# ft_lstiter_bonus.c \
+				# ft_lstmap_bonus.c \
 
 OFILES		= $(SRC:.c=.o)
 

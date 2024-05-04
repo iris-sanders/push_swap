@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:44:56 by irissanders       #+#    #+#             */
-/*   Updated: 2023/11/07 15:28:37 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:57:39 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
+// t_list	*ft_lstnew(void *content)
+// {
+// 	t_list	*node;
 
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
+// 	node = malloc(sizeof(t_list));
+// 	if (!node)
+// 		return (NULL);
+// 	node->content = content;
+// 	node->next = NULL;
+// 	return (node);
+// }
 
 // int main(void)
 // {

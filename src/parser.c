@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:28:20 by irsander          #+#    #+#             */
-/*   Updated: 2024/04/29 19:05:30 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 12:41:29 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,9 @@ void	input_is_valid(char **array)
 	{
 		if (is_number(array[y]) == false || \
 			integer_limit(array[y]) == false)
-			ft_error("input not valid");
+			ft_error("input invalid");
 		y++;
 	}
 	if (no_duplicates(array) == false)
-		ft_error("input not valid");
+		ft_error("input invalid");
 }

@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:19:23 by irsander          #+#    #+#             */
-/*   Updated: 2024/04/29 19:03:45 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/04 18:32:27 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,41 @@
 
 
 
-
+void	init(char **array_2d, t_list **list_a, t_list **list_b)
+{
+	input_is_valid(array_2d);
+	*list_a = array2d_to_linked_list(array_2d);
+	*list_b = NULL;
+	free_2d_array(array_2d);
+}
 
 
 int main(int argc, char **argv) 
 {
-	char **array;
+	char **array_2d;
+	t_list	*list_a;
+	t_list	*list_b;
 
 	if (argc < 2)
 		ft_error("Not enough arguments:\n<./push_swap> <numbers to sort>"); //dont display anything and give the prompt back
 	if (argc == 2)
 	{
-		array = ft_split(argv[1], ' ');
-		if (!array)
+		array_2d = ft_split(argv[1], ' ');
+		if (!array_2d)
+		{
+			free_2d_array(array_2d);
 			ft_error("Failed to split input");
-		input_is_valid(array);
+		}
+		init(array_2d, &list_a, &list_b);
 	}
-	else
-		input_is_valid(argv +1);
+	else 
+	{
+		array_2d = strdup_2d_array(argv +1);
+		init(array_2d, &list_a, &list_b);
+	}
+	print_list(list_a);
+	free_list(list_a);
+
 	// char * (*algos[3])(int *input);
 
 	// algos[0] = &fake_sort;
@@ -79,3 +96,4 @@ int main(int argc, char **argv)
 	// // Print shortest result
 	
 }
+
