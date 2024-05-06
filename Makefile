@@ -6,7 +6,7 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 16:19:13 by isanders          #+#    #+#              #
-#    Updated: 2024/05/04 17:41:48 by irsander         ###   ########.fr        #
+#    Updated: 2024/05/06 15:38:05 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ FILES = main.c \
 		utils.c \
 		list.c \
 		list_utils.c \
+		operations.c \
 
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))	
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
