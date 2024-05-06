@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:09:51 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 16:49:57 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:38:05 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ t_list	*ft_lstnew(int num);
 t_list	*create_first_node(char **array_2d, t_list *head, int num);
 t_list	*array2d_to_linked_list(char **array_2d);
 
-//operations.c
-bool	swap(t_list **list_head);
-bool	push(t_list **head_list_a, t_list **head_list_b);
-bool	rotate(t_list **list_head);
-bool	reverse_rotate(t_list **list_head);
-
 //parser_utils.c
 bool	min_max_int_check(long long number);
 bool	atoi_int_limit_check(char *str);
@@ -50,6 +44,29 @@ bool	no_duplicates(char **array);
 bool	integer_limit(char *s);
 bool	is_number(char *s);
 void	input_is_valid(char **array);
+
+//push_operations.c
+void	push(t_list **head_list_a, t_list **head_list_b);
+char	*push_b(t_list **head_list_a, t_list **head_list_b);
+char	*push_a(t_list **head_list_b, t_list **head_list_a);
+
+//reverse_rotate_operations.c
+void	reverse_rotate(t_list **list_head);
+char	*reverse_rotate_a(t_list **list_head_a);
+char	*reverse_rotate_b(t_list **list_head_b);
+char	*reverse_rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
+
+//rotate_operations.c
+void	rotate(t_list **list_head);
+char	*rotate_a(t_list **list_head_a);
+char	*rotate_b(t_list **list_head_b);
+char	*rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
+
+//swap_operations.c
+void	swap(t_list **list_head);
+char	*swap_a(t_list **list_head_a);
+char	*swap_b(t_list **list_head_b);
+char	*swap_a_and_b(t_list **list_head_a, t_list **list_head_b);
 
 //utils.c
 void	mem_error(char **array);

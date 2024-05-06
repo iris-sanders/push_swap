@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:19:23 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 16:50:18 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:38:59 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,12 @@ int main(int argc, char **argv)
 
 	if (argc < 2)
 		ft_error("Not enough arguments:\n<./push_swap> <numbers to sort>"); //dont display anything and give the prompt back
-	
 	if (argc == 2)
 		array_2d = ft_split(argv[1], ' ');
 	else
 		array_2d = strdup_2d_array(argv +1);
-	
 	if (!array_2d)
 		mem_error(array_2d);
-	
 	init(array_2d, &list_a, &list_b);
 	
 	// //test swap:

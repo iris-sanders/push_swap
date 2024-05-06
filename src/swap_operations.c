@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   swap_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 15:37:45 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 16:49:23 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:37:21 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,64 +31,37 @@ ROTATE
 REVERSE ROTATE
 */
 
-bool	swap(t_list **list_head)
+void	swap(t_list **list_head)
 {
 	t_list	*first_node;
 	t_list	*second_node;
 
-	if (!(*list_head) || !(*list_head)->next)
-		return (false);
 	first_node = *list_head;
 	second_node = (*list_head)->next;
 	first_node->next = second_node->next;
 	second_node->next = first_node;
 	(*list_head) = second_node;
-	return (true);
 }
 
-bool	push(t_list **head_list_a, t_list **head_list_b)
+char	*swap_a(t_list **list_head_a)
 {
-	t_list	*og_second_node_a;
-
-	if (!(*head_list_a))
-		return (false);
-	og_second_node_a = (*head_list_a)->next;
-	(*head_list_a)->next = (*head_list_b);
-	(*head_list_b) = (*head_list_a);
-	(*head_list_a) = og_second_node_a;
-	return (true);
+	swap(list_head_a);
+	return("sa");
 }
 
-bool	rotate(t_list **list_head)
+char	*swap_b(t_list **list_head_b)
 {
-	t_list	*first_node;
-	t_list	*last_node;
-
-	first_node = *list_head;
-	last_node = *list_head;
-	while (last_node->next)
-		last_node = last_node->next;
-	*list_head = (*list_head)->next;
-	first_node->next = NULL;
-	last_node->next = first_node;
-	return (true);
+	swap(list_head_b);
+	return("sb");
 }
 
-bool	reverse_rotate(t_list **list_head)
+char	*swap_a_and_b(t_list **list_head_a, t_list **list_head_b)
 {
-	t_list	*last_node;
-	t_list	*node_before_last_node;
-
-	if (!(*list_head) || !(*list_head)->next)
-		return (false);
-	last_node = *list_head;
-	while (last_node->next)
-		last_node = last_node->next;
-	node_before_last_node = *list_head;
-	while (node_before_last_node->next->next)
-		node_before_last_node = node_before_last_node->next;
-	last_node->next = *list_head;
-	node_before_last_node->next = NULL;
-	*list_head = last_node;
-	return(true);
+	swap(list_head_a);
+	swap(list_head_b);
+	return("ss");
 }
+
+
+
+
