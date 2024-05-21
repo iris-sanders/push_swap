@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:10:19 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 17:33:22 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:16:52 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,21 @@ void	rotate(t_list **list_head)
 	last_node->next = first_node;
 }
 
-char	*rotate_a(t_list **list_head_a)
+void	rotate_a(t_list **list_head_a)
 {
 	rotate(list_head_a);
-	return("ra");
+	ft_printf("ra\n");
 }
 
-char	*rotate_b(t_list **list_head_b)
+void	rotate_b(t_list **list_head_b)
 {
 	rotate(list_head_b);
-	return("rb");
+	ft_printf("rb\n");
 }
 
-char	*rotate_a_and_b(t_list **list_head_a, t_list **list_head_b)
+void	rotate_a_and_b(t_list **list_head_a, t_list **list_head_b)
 {
 	rotate(list_head_a);
 	rotate(list_head_b);
-	return("rr");
+	ft_printf("rr\n");
 }

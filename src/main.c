@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:19:23 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 17:38:59 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:32:29 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,20 @@
 // 	;
 // }
 
-
+bool	a_is_sorted(t_list **head_list_a)
+{
+	t_list	*current;
+	
+	current = *head_list_a;
+	while (current && current->next)
+	{
+		if (current->num > current->next->num)
+			return (false);
+		else
+			current = current->next;
+	}
+	return (true);
+}
 
 void	init(char **array_2d, t_list **list_a, t_list **list_b)
 {
@@ -46,7 +59,7 @@ int main(int argc, char **argv)
 	t_list	*list_b;
 
 	if (argc < 2)
-		ft_error("Not enough arguments:\n<./push_swap> <numbers to sort>"); //dont display anything and give the prompt back
+		exit(EXIT_FAILURE);
 	if (argc == 2)
 		array_2d = ft_split(argv[1], ' ');
 	else
@@ -54,48 +67,11 @@ int main(int argc, char **argv)
 	if (!array_2d)
 		mem_error(array_2d);
 	init(array_2d, &list_a, &list_b);
+	index_presort(&list_a);
+	sort(&list_a, &list_b);
+	free_list(list_a);
 	
-	// //test swap:
-	// ft_printf("list before:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-	// swap(&list_a);
-	// ft_printf("list after:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-
-	// //test push:
-	// ft_printf("list a before:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-	// ft_printf("list b before:\n");
-	// print_list(list_b);
-	// ft_printf("\n");
-	// push(&list_a, &list_b);
-	// ft_printf("list a after:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-	// ft_printf("list b after:\n");
-	// print_list(list_b);
-
-	// //test rotate:
-	// ft_printf("list before:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-	// rotate(&list_a);
-	// ft_printf("list after:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-
-	// //test reverse_rotate:
-	// ft_printf("list before:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-	// reverse_rotate(&list_a);
-	// ft_printf("list after:\n");
-	// print_list(list_a);
-	// ft_printf("\n");
-
+	
 
 	
 
@@ -115,7 +91,6 @@ int main(int argc, char **argv)
 
 //1. sort the list
 	
-	free_list(list_a);
 
 	// t_stack stack = {
 	// 	list_a,

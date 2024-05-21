@@ -6,12 +6,12 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 16:19:13 by isanders          #+#    #+#              #
-#    Updated: 2024/05/06 17:08:35 by irsander         ###   ########.fr        #
+#    Updated: 2024/05/21 15:20:15 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
 NAME = push_swap
 
@@ -31,6 +31,7 @@ FILES = main.c \
 		push_operations.c \
 		rotate_operations.c \
 		reverse_rotate_operations.c \
+		sort.c \
 
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))	
 OBJ = $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))

@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:37:02 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 19:02:16 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:17:50 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,6 @@ char	**strdup_2d_array(char **temp_array)
 		y--;
 	}
 	return (array);
-}
-
-void	free_list(t_list *head)
-{
-	t_list	*current;
-	t_list	*next;
-
-	current = head;
-	while (current)
-	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
 }
 
 void	free_2d_array(char **array)

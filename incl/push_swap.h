@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:09:51 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 17:38:05 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:17:56 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,15 @@
 
 typedef struct s_list {
 	int				num;
+	int				presort;
 	struct s_list	*next;
 } t_list;
 
 //list_utils.c
 void	print_list(t_list *head);
+int		node_count(t_list **head);
+int		find_max_presort(t_list **head_list_a);
+void	free_list(t_list *head);
 
 //list.c
 void	ft_lstadd_back(t_list **head, t_list *new);
@@ -34,6 +38,10 @@ t_list	*add_nodes_to_list_back(char **array_2d, t_list *head_a, int num);
 t_list	*ft_lstnew(int num);
 t_list	*create_first_node(char **array_2d, t_list *head, int num);
 t_list	*array2d_to_linked_list(char **array_2d);
+
+//main.c
+bool	a_is_sorted(t_list **head_list_a);
+void	init(char **array_2d, t_list **list_a, t_list **list_b);
 
 //parser_utils.c
 bool	min_max_int_check(long long number);
@@ -47,26 +55,34 @@ void	input_is_valid(char **array);
 
 //push_operations.c
 void	push(t_list **head_list_a, t_list **head_list_b);
-char	*push_b(t_list **head_list_a, t_list **head_list_b);
-char	*push_a(t_list **head_list_b, t_list **head_list_a);
+void	push_b(t_list **head_list_a, t_list **head_list_b);
+void	push_a(t_list **head_list_b, t_list **head_list_a);
 
 //reverse_rotate_operations.c
 void	reverse_rotate(t_list **list_head);
-char	*reverse_rotate_a(t_list **list_head_a);
-char	*reverse_rotate_b(t_list **list_head_b);
-char	*reverse_rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
+void	reverse_rotate_a(t_list **list_head_a);
+void	reverse_rotate_b(t_list **list_head_b);
+void	reverse_rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
 
 //rotate_operations.c
 void	rotate(t_list **list_head);
-char	*rotate_a(t_list **list_head_a);
-char	*rotate_b(t_list **list_head_b);
-char	*rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
+void	rotate_a(t_list **list_head_a);
+void	rotate_b(t_list **list_head_b);
+void	rotate_a_and_b(t_list **list_head_a, t_list **list_head_b);
+
+//sort.c
+void    index_presort(t_list **head_list_a);
+void    sort(t_list **head_list_a, t_list **head_list_b);
+void    three_sort(t_list **head_list_a);
+void    five_sort(t_list **head_list_a, t_list **head_list_b);
+void    radix_sort(t_list **head_list_a, t_list **head_list_b);
+
 
 //swap_operations.c
 void	swap(t_list **list_head);
-char	*swap_a(t_list **list_head_a);
-char	*swap_b(t_list **list_head_b);
-char	*swap_a_and_b(t_list **list_head_a, t_list **list_head_b);
+void	swap_a(t_list **list_head_a);
+void	swap_b(t_list **list_head_b);
+void	swap_a_and_b(t_list **list_head_a, t_list **list_head_b);
 
 //utils.c
 void	mem_error(char **array);

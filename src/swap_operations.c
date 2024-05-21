@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 15:37:45 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/06 17:37:21 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:16:15 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,25 @@ void	swap(t_list **list_head)
 	(*list_head) = second_node;
 }
 
-char	*swap_a(t_list **list_head_a)
+void	swap_a(t_list **list_head_a)
 {
 	swap(list_head_a);
-	return("sa");
+	ft_printf("sa\n");
 }
 
-char	*swap_b(t_list **list_head_b)
+void	swap_b(t_list **list_head_b)
 {
 	swap(list_head_b);
-	return("sb");
+	ft_printf("sb\n");
 }
 
-char	*swap_a_and_b(t_list **list_head_a, t_list **list_head_b)
+void	swap_a_and_b(t_list **list_head_a, t_list **list_head_b)
 {
 	swap(list_head_a);
 	swap(list_head_b);
-	return("ss");
+	ft_printf("ss\n");
 }
+
 
 
 

@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 12:56:09 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 19:00:49 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 11:42:13 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_list	*ft_lstnew(int num)
 	if (!node)
 		return (NULL);
 	node->num = num;
+	node->presort = 0;
 	node->next = NULL;
 	return (node);
 }
