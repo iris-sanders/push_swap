@@ -6,12 +6,11 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:28:20 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/04 12:41:29 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:40:08 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 bool	no_duplicates(char **array)
 {
@@ -34,7 +33,6 @@ bool	no_duplicates(char **array)
 		y++;
 	}
 	return (true);
-	
 }
 
 bool	integer_limit(char *s)

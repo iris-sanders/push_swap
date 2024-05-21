@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:41:15 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/21 12:17:56 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:37:06 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	node_count(t_list **head)
 {
 	int		count;
 	t_list	*current;
-	
+
 	count = 0;
 	current = *head;
 	while (current)

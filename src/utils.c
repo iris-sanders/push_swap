@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:37:02 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/21 12:17:50 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:42:47 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	mem_error(char **array)
 	ft_error("Failed to allocate memory");
 }
 
-int		count_array(char **array_2d) //ft_strlen
+int	count_array(char **array_2d) //ft_strlen
 {
-	int y;
+	int	y;
 
 	y = 0;
-	while(array_2d[y])
+	while (array_2d[y])
 		y++;
 	return (y);
 }

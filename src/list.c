@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 12:56:09 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/21 11:42:13 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:30:50 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,5 @@ t_list	*array2d_to_linked_list(char **array_2d)
 			add_nodes_to_list_back(array_2d, head_a, num);
 		y++;
 	}
-	return(head_a);
+	return (head_a);
 }
-

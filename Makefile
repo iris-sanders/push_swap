@@ -6,12 +6,12 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 16:19:13 by isanders          #+#    #+#              #
-#    Updated: 2024/05/21 15:20:15 by irsander         ###   ########.fr        #
+#    Updated: 2024/05/21 16:58:08 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g
 
 NAME = push_swap
 

@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:19:23 by irsander          #+#    #+#             */
-/*   Updated: 2024/05/21 15:32:29 by irsander         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:39:41 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // char *fake_sort(t_stack *input)
 // {
-	
+
 // 	return "sa\npb\n";
 // }
 
@@ -31,7 +31,7 @@
 bool	a_is_sorted(t_list **head_list_a)
 {
 	t_list	*current;
-	
+
 	current = *head_list_a;
 	while (current && current->next)
 	{
@@ -45,21 +45,22 @@ bool	a_is_sorted(t_list **head_list_a)
 
 void	init(char **array_2d, t_list **list_a, t_list **list_b)
 {
+	if (!array_2d[0])
+		ft_error("empty string");
 	input_is_valid(array_2d);
 	*list_a = array2d_to_linked_list(array_2d);
 	*list_b = NULL;
 	free_2d_array(array_2d);
 }
 
-
-int main(int argc, char **argv) 
+int	main(int argc, char **argv)
 {
 	char	**array_2d;
 	t_list	*list_a;
 	t_list	*list_b;
 
 	if (argc < 2)
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	if (argc == 2)
 		array_2d = ft_split(argv[1], ' ');
 	else
@@ -70,62 +71,4 @@ int main(int argc, char **argv)
 	index_presort(&list_a);
 	sort(&list_a, &list_b);
 	free_list(list_a);
-	
-	
-
-	
-
-	// char** length is number of operations
-
-	/* structs:
-	operations = {
-		t_list *ops;
-		int length;
-	}
-
-	stack = {
-		t_list *a;
-		t_list *b;
-	}
-	*/
-
-//1. sort the list
-	
-
-	// t_stack stack = {
-	// 	list_a,
-	// 	list_b
-	// }
-	// char * (*functions[3])(t_stack *input);
-
-	// functions[0] = &fake_sort;
-	// functions[1] = &fvery_ake_sort;
-	// functions[2] = 0;	// NULL terminator
-	// int i = 0;
-	// // // Array to store results
-	// t_ops results[3];
-	// // // Null-terminator
-	// // results[2] = 0;
-	// // // Argv array
-	// // // parse(argv);
-	// // int arr[5] = {0, 6, 8, 7, 9};
-	// // // Loop on algorithms and store return of function
-	// while (functions[i])
-	// {
-	// 	t_stack *stack_copy = copy_stack_struct(stack)
-	// 	results[i] = functions[i](stack_copy);
-	// 	// free stack copy
-	// 	i++;
-	// }
-	
-	// // i = 0;
-	// // // Find which result is shorter
-	// // while (results[i])
-	// // {
-	// // 	results[i].length
-	// // 	i++;
-	// // }
-	// // // Print shortest result
-	
 }
-
